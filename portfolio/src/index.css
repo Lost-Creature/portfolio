@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Montserrat:wght@400;700&family=Nunito:wght@400;700&family=Poppins:wght@400;700&display=swap');
+@import "tailwindcss";
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --color-dark-blue: #0a0f2c;
+  --color-deep-purple: #240016;
+  --color-neon-green: #39ff14;
+  --font-retro:'Press Start 2P', monospace;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-montserrat-alt: 'Montserrat Alternates', sans-serif;
+  --font-nunito: 'Nunito', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-code: "Source Code Pro", monospace;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    font-family: var(--font-inter);
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@keyframes move-arrow {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 40px solid red;
+  filter: drop-shadow(0 0 6px red);
+}
+
+.Stext::after{
+content: '';
+width: 50%;
+bottom: -25px;
+left: 50%;
+transform: translateX(-50%);
+height: 2px;
+background-color: rgb(224, 224, 224);
+border-radius: 50%;
+position: absolute;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  background: white;
+  margin-left: -3px;
+  width: 2px;
+  height: 110%;
+  z-index: 1;
+  left: 50%;
+}
+
+.right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #fff;
+  left: -15px;
+}
+.left-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #333232;
+  right: -15px;
+}
+
+.light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 50%, /* makes it an oval */
+    transparent 10%,
+    rgba(0, 0, 0, 0.50) 40%
+  );
+  background-size: contain;
+  
+}
+
+.ST {
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+  line-height: 0.7em;
+  font-weight: bold;
+  outline: none;
+  color: #0e3742;
+  text-shadow: none;
+}
+.ST {
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+  line-height: 0.7em;
+  font-weight: bold;
+  outline: none;
+  color: #0e3742;
+  transition: 0.7s;
+
+  text-shadow: none;
+}
+
+/* Correct the selector to match `.ST.active` exactly */
+.ST.active {
+  transition: 1s;
+  text-shadow: 
+    0 0 10px #03bcf4,
+    0 0 20px #03bcf4,
+    0 0 40px #03bcf4,
+    0 0 80px #03bcf4,
+    0 0 160px #03bcf4;
+  color: #fff;
+}
+
+/* From Uiverse.io by vinodjangid07 */ 
+#checkbox {
+  display: none;
+}
+
+.switch {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(99, 99, 99);
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.7s;
+  border: 2px solid rgb(219, 10, 10);
+  box-shadow: 0px 0px 1px rgb(219, 10, 10) inset,
+    0px 0px 2px rgb(190, 187, 187) inset, 0px 0px 10px rgb(219, 10, 10) inset,
+    0px 0px 40px rgb(219, 10, 10), 0px 0px 100px rgb(219, 10, 10),
+    0px 0px 5px rgb(219, 10, 10);
+  border: 2px solid rgb(201, 12, 12);
+  background-color: rgb(126, 112, 112);}
+.switch svg {
+  width: 1.2em;
+}
+.switch svg path {
+  fill: rgb(48, 48, 48);
+}
+#checkbox:checked + .switch {
+  transition: 0.7s;
+
+  box-shadow: 0px 0px 1px rgb(17, 190, 212) inset,
+    0px 0px 2px rgb(17, 190, 212) inset, 0px 0px 10px rgb(17, 190, 212) inset,
+    0px 0px 40px rgb(17, 190, 212), 0px 0px 100px rgb(17, 190, 212),
+    0px 0px 5px rgb(17, 190, 212);
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(146, 180, 184);
+}
+#checkbox:checked + .switch svg {
+  filter: drop-shadow(0px 0px 5px rgb(17, 190, 212));
+}
+#checkbox:checked + .switch svg path {
+  fill: rgb(255, 255, 255);
+}
+.lighting{
+  text-shadow: 
+  0 0 10px #03bcf4,
+  0 0 20px #03bcf4,
+  0 0 40px #03bcf4,
+  0 0 80px #03bcf4,
+  0 0 160px #03bcf4;
+}
+@media (max-width: 1024px) {
+  .timeline::after {
+    display: none;
+  }
+}
