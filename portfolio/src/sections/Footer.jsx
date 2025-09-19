@@ -63,7 +63,7 @@ const Footer = () => {
       <div className="border-t border-gray-700 mt-12 pt-6 flex flex-wrap justify-between items-center text-gray-400 text-sm max-w-7xl mx-auto">
         <div className="flex items-center space-x-2">
           
-          <p>© {new Date().getFullYear()} YosStore. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} YosInc. All rights reserved.</p>
         </div>
         <a 
           href="#" 
